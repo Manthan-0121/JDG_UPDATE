@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements</title>
+</head>
+
+<body>
+    <script>
+        let option = Number(prompt("Select any one option given below : " +
+            "1 = Start Game," +
+            "2 = Continue Game," +
+            "3 = Show Menu," +
+            "4 = Exit,"
+        ));
+
+        switch (option) {
+            case 1:
+                document.write("You have selected Option 1: Start Game");
+                break;
+            case 2:
+                document.write("You have selected Option 2: Continue Game");
+                break;
+            case 3:
+                document.write("You have selected Option 3: Show Menu");
+                break;
+            case 4:
+                document.write("You have selected Option 4: Exit");
+                break;
+            default:
+                document.write("You have not selected any Option");
+                break;
+        }
+    </script>
+</body>
+
+</html>

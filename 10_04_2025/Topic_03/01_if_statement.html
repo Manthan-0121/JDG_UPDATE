@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF Statement</title>
+</head>
+<body>
+    <p style="font-size: 50px;" id="msg"></p>
+    <script>
+        let price = Number(prompt("Enter Product Price"));
+
+        if(price <= 500 ){
+            document.getElementById('msg').innerHTML = "You can't get Discount " + price + " RS </b>product";
+        }else if(price <= 5000 ){
+            document.getElementById('msg').innerHTML = "You get a 3% Discount  on <b>" + price + " RS </b>product";
+        }else if(price <= 7000){
+            document.getElementById('msg').innerHTML = "You get a 7% Discount on <b>" + price + " RS </b>product";
+        }else if(price <= 9000){
+            document.getElementById('msg').innerHTML = "You get a 8% Discount on <b>" + price + " RS </b>product";
+        }else{
+            document.getElementById('msg').innerHTML = "You get a 9% Discount on <b>" + price + " RS </b>product";
+        }
+    </script>
+</body>
+</html>
