@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Demo JavaScript in Head</h2>
+    <hr>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <hr>
+    <p id="h_inner"></p>
+    <hr>
+    <p id="h_Text"></p>
+    <hr>
+    <button onclick="document.write(5+4)">Click Me</button>
+    <hr>
+    <p>Open Inspect element -> Console and show the console.log() demo</p>
+    <hr>
+    <button onclick="window.print()">Print This Page</button>
+    <hr>
+
+
+    <script>
+        document.getElementById("h_inner").innerHTML = "<h2>This show is innerHTML</h2>";
+        document.getElementById("h_Text").innerText = "<h2>This show is innerTEXT</h2>";
+
+        document.write("This is write using document.write() in script");
+
+        alert("Demo aler Box");
+
+        console.log("This is write using console.log() method");
+    </script>
+
+    
+</body>
+
+</html>
