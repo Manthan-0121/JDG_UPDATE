@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ["Banana", "Apple", "Grapes"];
+        document.write(fruits);
+
+        document.write("<br>Length of array is : ")
+        document.write(fruits.length)
+
+        document.write("<hr>");
+
+        document.write("Add new member using push() method in array <br>")
+        fruits.push("Mango");
+        document.write(fruits);
+
+        document.write("<hr>");
+
+        document.write("Add new member using length in array <br>")
+        fruits[fruits.length] = "Sapodilla";
+        document.write(fruits);
+
+        document.write("<hr>");
+
+        document.write("create a blank array and add new element using index <br>");
+        const person = [];
+        person[0] = "Manthan";
+        person[1] = "Mistry";
+        person[2] = "Developer";
+        document.write(person.length);
+        person[0];
+
+        document.write("<hr>");
+
+        document.write("create a blank array and add new element using key:value <br>");
+        const person1 = [];
+        person1["firstName"] = "Manthan";
+        person1["lastName"] = "Mistry";
+        person1["age"] = "Developer";
+        person1.length;
+        person1[0];
+
+        document.write("<hr>");
+
+        document.write("Get First elements on person array : <br>");
+        document.write(person[0]);
+
+        document.write("<hr>");
+
+        document.write("Get Last elements on person array : <br>");
+        document.write(person[person.length - 1]);
+
+        document.write("<hr>");
+
+        fruits.forEach(function(fruit){
+            document.write(fruit+"<br>");
+        });
+
+        document.write("<hr>");
+
+        document.write("array with join() <br>");
+        document.write(fruits.join("<br>"));
+        
+        document.write("<hr>")
+        document.write("<b>Before Array </b><br>");
+        document.write(fruits.join("<br>"));
+        document.write("<br><b>After pop() Array </b><br>")
+        document.write("Removed element : "+fruits.pop()+"<br>");
+        document.write(fruits.join("<br>"));
+        
+        document.write("<hr>");
+
+        document.write("New after fruit avocado add using push() <br>")
+        fruits.push("avocado")
+        document.write(fruits);
+    </script>
+</body>
+
+</html>

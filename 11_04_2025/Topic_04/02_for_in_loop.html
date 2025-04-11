@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop</title>
+</head>
+<body>
+    <script>
+        let city_name = ["Rajkot","Jamnagar","Amreli","Surat"];
+        let sqn = 1;
+        for(let x in city_name){
+            if (city_name[x] == "Jamnagar"){
+                continue;
+            }
+            document.write((sqn++)+") "+city_name[x]+"<br>");
+        }
+    </script>
+</body>
+</html>

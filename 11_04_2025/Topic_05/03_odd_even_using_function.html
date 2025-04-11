@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd even number check</title>
+</head>
+
+<body>
+    <script>
+        let get_num = Number(prompt('Enter any one number : '));
+
+        chk_num(get_num);
+        
+        function chk_num(chk_number) {
+            if ((chk_number % 2) == 0) {
+                document.write("This is Even number");
+            } else {
+                document.write("This is Odd number");
+            }
+        }
+    </script>
+</body>
+
+</html>
