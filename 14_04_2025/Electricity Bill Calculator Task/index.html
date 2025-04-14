@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Electricity Bill Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="mb-3 col-md-3">
+            <label class="form-label">Unit</label>
+            <input type="number" class="form-control" min="1" placeholder="Enter your electric unit" id="txt_unit"
+                required>
+        </div>
+        <div class="mb-3">
+            <input type="button" value="Generate Bill" onclick="calculate_bill()" class="btn btn-primary">
+        </div>
+    </div>
+    <div class="container mt-5 d-none" id="hdn_div">
+        <label class="form-label">Unit is : </label> <span class="badge text-bg-success p-2" id="tot_unit"></span>
+        <br>
+        <label class="form-label">Your Bill price is : </label> <span class="badge text-bg-info p-2"
+            id="tot_bill"></span>
+        <br>
+        <label class="form-label">Per Unit Price : </label> <b id="per_unit"></b>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function calculate_bill() {
+            let txt_unit = document.getElementById('txt_unit').value;
+            let tot_bill = document.getElementById('tot_bill');
+            let tot_unit = document.getElementById('tot_unit');
+            let hdn_div = document.getElementById('hdn_div');
+            let total_bill;
+            if (txt_unit <= 50) {
+                total_bill = txt_unit * 3.50;
+                per_unit_price = 3.50;
+            } else if (txt_unit <= 150) {
+                total_bill = txt_unit * 4.00;
+                per_unit_price = 4.00;
+            } else if (txt_unit <= 250) {
+                total_bill = txt_unit * 5.20;
+                per_unit_price = 5.20;
+            } else {
+                total_bill = txt_unit * 6.50;
+                per_unit_price = 6.50;
+            }
+            hdn_div.classList.remove('d-none');
+            tot_unit.innerText = txt_unit;
+            tot_bill.innerText = "₹ " + total_bill;
+            document.getElementById('per_unit').innerText = "₹ " + per_unit_price;
+        }
+    </script>
+</body>
+
+</html>

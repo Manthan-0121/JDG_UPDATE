@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <script>
+        const emp_info = [
+            { name: "Manthan", age: 20 },
+            { name: "Jatin", age: 22 },
+            { name: "Raj", age: 23 },
+            { name: "Kevin", age: 24 }
+        ];
+
+        console.log("Employee Age is <= 22 is employees list")
+        console.log(emp_info.filter(emp_nm => (emp_nm.name, emp_nm.age <= 22)));
+
+        console.log(emp_info.map(emp_info => emp_info.name));
+
+        console.log(emp_info.filter(emp_nm => (emp_nm.name, emp_nm.age > 20)));
+    </script>
+</body>
+
+</html>
