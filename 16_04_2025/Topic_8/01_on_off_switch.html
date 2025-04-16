@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <h2 id="status">On</h2>
+    <img src="./img/on.png" id="img_switch" height="50px" width="60px">
+    <br>
+    <button onclick="offswitch()">OFF</button>
+    <button onclick="onswitch()">ON</button>
+
+    <script>
+        function offswitch(){
+            document.getElementById('status').innerHTML = "Off"  
+            document.getElementById('img_switch').setAttribute("src","./img/off.png");  
+
+        }
+        function onswitch(){
+            document.getElementById('status').innerHTML = "On"  
+            document.getElementById('img_switch').setAttribute("src","./img/on.png");  
+
+        }
+    </script>
+</body>
+</html>

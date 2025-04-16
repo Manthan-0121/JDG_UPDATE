@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color Box</title>
+    <style>
+        .circle {
+            background-color: skyblue;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        .square {
+            background-color: skyblue;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Change shape in mouse IN and OUT</h3>
+    <div class="square" onmouseenter="circleShape()" onmouseleave="squareShape()" id="shape"></div>
+    <br>
+
+    <script>
+        function circleShape() {
+            document.getElementById('shape').classList.remove('square');
+            document.getElementById('shape').classList.add('circle');
+        }
+        function squareShape() {
+            document.getElementById('shape').classList.remove('circle');
+            document.getElementById('shape').classList.add('square');
+        }
+    </script>
+</body>
+
+</html>

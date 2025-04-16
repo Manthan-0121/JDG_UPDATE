@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game</title>
+</head>
+
+<body>
+    Enter any 1 to 10 number <br>
+    <input type="number" min="1" max="10" step="1" id="txt_num">
+    <input type="submit" onclick="guess_num()" value="Guess">
+    <h3 id="res_show"></h3>
+    <script>
+        function guess_num() {
+            let txt_num = document.getElementById('txt_num').value;
+            let rendom_num = Math.ceil(Math.random() * 10);
+            console.log(rendom_num);
+            if(txt_num == rendom_num){
+                document.getElementById('res_show').innerText = "Yee! You Win";
+            }else{
+                document.getElementById('res_show').innerText = "You not correct";
+            }
+        }
+    </script>
+</body>
+
+</html>

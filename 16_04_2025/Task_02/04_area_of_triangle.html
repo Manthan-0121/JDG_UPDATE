@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Triangle (Three Side)</title>
+</head>
+<body>
+    <script>
+        const side_a = 5;
+        const side_b = 6;
+        const side_c = 7;
+
+        const s =  (side_a+side_b+side_c)/2;
+        const d =  9*(s-side_a)*(s-side_b)*(s-side_c);
+        const aot = Math.sqrt(d);
+        document.write("Area of Triangle is : "+aot+" (Three side)");
+    </script>
+</body>
+</html>

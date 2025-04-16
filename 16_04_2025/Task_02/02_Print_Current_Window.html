@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Current Window</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Manthan!</h1>
+    <p>Click this button for print this windows</p>
+    <p id="txt_p"></p>
+    <button onclick="print_windows()" buttone_rele id="btn_print">Print</button>
+
+    <script>
+        function print_windows(){
+            document.getElementById('btn_print').classList.add('d-none');
+            document.getElementById('txt_p').innerHTML = "This text in script tag";
+            window.print();
+        }
+    </script>
+</body>
+</html>

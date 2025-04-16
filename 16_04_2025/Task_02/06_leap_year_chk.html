@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Check</title>
+</head>
+
+<body onload="get_value()">
+    <h2>Select Date For check leap year or not</h2>
+    <input type="number" oninput="chk_date()" step="2" max="2100" mix="1800" id="dt_year">
+    <p id="txt_res"></p>
+</body>
+<script>
+    function chk_date() {
+        let dt_year = new Date(document.getElementById('dt_year').value);
+        let get_year = dt_year.getFullYear();
+        let division_4 = get_year % 4;
+        let division_100 = get_year % 100;
+        let division_400 = get_year % 100;
+
+        if( division_4 == 0 && division_100 != 0 || division_400 == 0){
+            document.getElementById("txt_res").innerText = "This is leap year";
+        }else{
+            document.getElementById("txt_res").innerText = "This is not year";
+        }
+    }
+    function get_value(){
+        let curent_year = new Date;
+        document.getElementById('dt_year').setAttribute("value",curent_year.getFullYear());
+    }
+</script>
+
+</html>

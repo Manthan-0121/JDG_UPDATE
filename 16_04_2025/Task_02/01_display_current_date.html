@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Current Date</title>
+</head>
+
+<body>
+    <script>
+        let cur_dt = new Date();
+
+        switch (cur_dt.getDay()) {
+            case 1:
+                day_name = "Monday";
+                break;
+            case 2:
+                day_name = "Tuesday";
+                break;
+            case 3:
+                day_name = "Wednesday";
+                break;
+            case 4:
+                day_name = "Thursday";
+                break;
+            case 5:
+                day_name = "Friday";
+                break;
+            case 6:
+                day_name = "Saturday";
+                break;
+            case 7:
+                day_name = "Sunday";
+                break;
+            default:
+                break;
+        }
+
+        if (cur_dt.getHours() <= 12) {
+            day_status = "AM";
+        } else {
+            day_status = "PM";
+        }
+
+        document.write("Today is : " + day_name);
+        document.write("<br>")
+        document.write("Current time is: " + cur_dt.getHours() + " " + day_status + " : " + cur_dt.getMinutes() + " : " + cur_dt.getSeconds());
+    </script>
+</body>
+
+</html>

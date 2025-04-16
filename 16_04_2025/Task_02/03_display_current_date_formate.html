@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Current Date in Formate</title>
+</head>
+<body>
+    <script>
+        let full_dt = new Date();
+        document.writeln("Full Date is : "+full_dt+"<br>");
+        let current_date;
+        let current_month;
+        let current_year = full_dt.getFullYear();
+
+        if(full_dt.getDate() <= 9){
+            current_date = "0"+full_dt.getDate();
+        }else{
+            current_date = full_dt.getDate();
+        }
+
+        if(full_dt.getMonth() <= 9){
+            current_month = "0"+full_dt.getMonth();
+        }else{
+            current_month = full_dt.getMonth();
+        }
+        document.write("Date Formate mm-dd-yyyy is : "+current_month+"-"+current_date+"-"+current_year);
+        document.write("<br>Date Formate mm/dd/yyyy is : "+current_month+"/"+current_date+"/"+current_year);
+        document.write("<br>Date Formate dd/mm/yyyy is : "+current_date+"/"+current_month+"/"+current_year);
+        document.write("<br>Date Formate dd-mm-yyyy is : "+current_date+"-"+current_month+"-"+current_year);
+    </script>
+</body>
+</html>

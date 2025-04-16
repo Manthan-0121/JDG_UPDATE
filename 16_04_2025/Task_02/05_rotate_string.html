@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt_pre{
+            color: green;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body onload="rotate_txt('txt_pre')">
+    <pre id="txt_pre">Manthan</pre>
+</body>
+<script>
+    function rotate_txt(id) {
+        var element = document.getElementById(id);
+        var textNode = element.childNodes[0];
+        var text = textNode.data;
+
+        setInterval(function () {
+            text = text[text.length - 1] + text.substring(0, text.length - 1);
+            textNode.data = text;
+        },200);
+    }
+</script>
+</body>
+
+</html>
