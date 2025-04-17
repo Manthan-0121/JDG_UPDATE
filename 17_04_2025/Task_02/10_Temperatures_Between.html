@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Temperatures Between Celsius and Fahrenheit</title>
+</head>
+
+<body>
+    <input type="number" id="txt_temperature">
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="Celsius_f()" value="Celsius to Fahrenheit">
+    <input type="button" onclick="Fahrenheit_c()" value="Fahrenheit to Celsius">
+    <br>
+    <br>
+    <br>
+    <h3 id="h3_res"></h3>
+    <script>
+        function Celsius_f() {
+            let txt_temperature = document.getElementById("txt_temperature").value;
+
+            let fahre = (txt_temperature * 1.8) + 32;
+
+            document.getElementById("h3_res").innerText = "Celsius to Fahrenheit is : " + fahre + "F";
+        }
+
+        function Fahrenheit_c() {
+            let txt_temperature = document.getElementById("txt_temperature").value;
+
+            let cels = (txt_temperature - 32) * 5 / 9;
+
+            document.getElementById("h3_res").innerText = "Fahrenheit to Celsius is : " + cels + "C";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Objects for Equivalent Properties</title>
+</head>
+
+<body>
+    <script>
+        const myobj1 = {
+            name: "Manthan",
+            age: 23,
+            city: "Rajkot"
+        }
+        const myobj2 = {
+            name: "Manthan",
+            age: 23,
+        }        
+        // if(Object.keys(myobj2) == Object.keys(myobj1)){
+        if(Object.keys(myobj2).every(myobj1 => myobj2.hasOwnProperty(myobj1)) && Object.keys(myobj1).every(myobj2 => myobj1.hasOwnProperty(myobj2))){
+            console.log("Both objects have the same keys.");
+        } else {
+            console.log("Both objects do not have the same keys.");
+        }
+        
+        
+    </script>
+</body>
+
+</html>

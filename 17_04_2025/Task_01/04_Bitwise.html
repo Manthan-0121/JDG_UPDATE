@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Demo</title>
+</head>
+
+<body>
+    <script>
+        let message = 123;     // secret message (number form)
+        let key = 42;          // secret key
+
+        let encrypted = message ^ key;   // XOR encryption
+        let decrypted = encrypted ^ key; // XOR again to get original back
+
+        console.log(encrypted);  // Encrypted value
+        console.log(decrypted);  // Original value: 123
+
+    </script>
+</body>
+
+</html>

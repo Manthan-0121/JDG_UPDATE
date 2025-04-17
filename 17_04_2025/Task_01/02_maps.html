@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps Demo</title>
+</head>
+<body>
+    <script>
+        const myMap = new Map([
+            ["name", "John"],
+            ["age", 30],
+            ["city", "New York"]
+        ]);
+        console.log(myMap.get("name")); // John
+        console.log(myMap.get("age")); // 30
+        console.log(myMap.get("city")); // New York
+
+        console.log(myMap.has("name")); // true
+        console.log(myMap.has("country")); // false
+
+        console.log(myMap.size); // 3
+
+        myMap.set("country", "USA");
+        console.log(myMap.get("country")); // USA
+
+        myMap.delete("age");
+        console.log(myMap.has("age")); // false
+
+        console.log(myMap.size); // 3
+        console.log(myMap.get("age")); // undefined
+        console.log(myMap.get("name")); // John
+
+        myMap.clear();
+
+        console.log(myMap.size); // 0
+        console.log(myMap.get("name")); // undefined
+        console.log(myMap.get("age")); // undefined
+        
+
+    </script>
+</body>
+</html>

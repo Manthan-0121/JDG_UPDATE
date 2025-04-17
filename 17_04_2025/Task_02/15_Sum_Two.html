@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Two Integers (Triple if Equal)</title>
+</head>
+<body>
+    <input type="number" min="1" id="txt_num1">
+    <input type="number" min="1" id="txt_num2">
+    <input type="button" value="Check Sum" onclick="sum_chk()">
+    <script>
+        function sum_chk(){
+            let txt_num1 = document.getElementById("txt_num1").value;
+            let txt_num2 = document.getElementById("txt_num2").value;
+
+            if(txt_num1 == "" || txt_num2 == ""){
+                alert("Please enter both numbers.");
+            } else {
+                sum = Number(txt_num1) + Number(txt_num2);
+                if (txt_num1 == txt_num2) {
+                    alert("Both value is same so triple of sum is " + (sum * 3));
+                } else{
+                    alert("Sum of given two numbers is " + sum);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

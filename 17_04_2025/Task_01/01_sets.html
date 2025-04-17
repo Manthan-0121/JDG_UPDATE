@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Demo</title>
+</head>
+
+<body>
+    <script>
+        // create a new set 
+        const mySet = new Set(["apple", "banana", "orange"]);
+        console.log(mySet.add("grape"));
+        console.log(mySet.add("grape"));
+        console.log(mySet.add("grape"));
+        console.log(mySet.add("grape"));
+        console.log(mySet.add("grape"));
+
+        console.log(typeof mySet); 
+        for (const x of mySet) {
+            console.log(x);
+        }
+        
+        // check if a value is in the set
+        console.log(mySet.has("banana"));
+        console.log(mySet.has("kiwi"));
+
+        // delete a value from the set
+        mySet.delete("banana");
+        console.log(mySet.has("banana")); // false
+
+        console.log(mySet.size); // 3
+
+        // clear the set
+        mySet.clear();
+        console.log(mySet.size); // 0
+
+        console.log(mySet.has("apple")); // false
+        console.log(mySet.has("banana")); // false
+
+
+        // create a new set with duplicate values
+        const mySet2 = new Set(["apple", "banana", "orange", "apple", "banana"]);
+        console.log(mySet2); // Set(3) { 'apple', 'banana', 'orange' }
+
+        
+
+    </script>
+</body>
+
+</html>

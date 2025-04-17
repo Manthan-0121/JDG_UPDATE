@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Variable with User-Defined Name</title>
+</head>
+
+<body>
+    <input type="text" id="txt_var_name">
+    <input type="button" value="Submit" onclick="submit_var_name()">
+    <h3 id="h3_res"></h3>
+    <script>
+        function submit_var_name() {
+            let txt_var_name = document.getElementById('txt_var_name').value;
+            const def_var = {
+                txt_var_name: txt_var_name,
+            };
+            document.getElementById('h3_res').innerText = def_var.txt_var_name;
+        } 
+    </script>
+</body>
+
+</html>

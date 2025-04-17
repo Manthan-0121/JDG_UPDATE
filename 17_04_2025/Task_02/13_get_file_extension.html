@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get File Extension of Filename</title>
+</head>
+
+<body>
+    <input type="file" id="fu_file" onchange="chk_extension()">
+    <br>
+    <br>
+    <br>
+    <h3 id="h3_res"></h3>
+    <script>
+        function chk_extension() {
+            let file_name = document.getElementById("fu_file").files[0].name
+            document.getElementById("h3_res").innerHTML = file_name.split('.').pop();
+        }
+    </script>
+</body>
+
+</html>

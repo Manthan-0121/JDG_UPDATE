@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Left Before Christmas</title>
+</head>
+
+<body>
+    <script>
+        let current_date = new Date();
+        let chis_date = new Date(current_date.getFullYear(), 11, 25);
+        let tot_day = 0;
+        let month_count = 1;
+        let current_past_day = 0;
+        let remaining_day = 0;
+        // get full year day
+        while (month_count <= 12) {
+            tot_day += (daycount(current_date.getFullYear(), month_count));
+            month_count++;
+        }
+
+        //get 1 st january to current date count
+        month_count = 1;
+        while (month_count <= current_date.getMonth() + 1) {
+            current_past_day += daycount(current_date.getFullYear(), month_count);
+            month_count++;
+        }
+        
+        current_past_day -= (current_date.getDate()-2);
+        // console.log(tot_day);
+        remaining_day = tot_day-(current_past_day+6);
+        
+        // console.log(remaining_day);
+        document.write("<br>Total Day : " + tot_day);
+        document.write("<br>1st january to current day : " + current_past_day);
+        
+        document.write("<br>Remaining day of chiasmas is : " + remaining_day);
+        function daycount(year, month) {
+            let month_day = new Date(year, month, 0).getDate();
+            return month_day;
+        }
+    </script>
+</body>
+
+</html>

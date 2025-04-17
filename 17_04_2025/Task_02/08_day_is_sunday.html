@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Years When Jan 1 is Sunday (2014?2050)</title>
+</head>
+
+<body>
+    <script>
+        let min_year = 2014;
+        let max_year = 2050;
+        let get_day;
+        while (min_year <= 2050) {
+            full_date = "01-01-" + min_year;
+            get_day = new Date(full_date);
+            if (get_day.getDate() == 1 && get_day.getDay() == 0) {
+                document.write("This year is get the sunday on 1st January : ");
+                document.write(get_day.getFullYear()+"<hr>");
+            }
+            min_year++;
+        }
+    </script>
+</body>
+
+</html>

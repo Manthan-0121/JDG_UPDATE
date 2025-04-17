@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between Number and 13</title>
+</head>
+
+<body>
+    <input type="number" min="0" id="txt_num" oninput="chk_num_diff()">
+    <h3 id="h3_res"></h3>
+    <script>
+        function chk_num_diff() {
+            let txt_num = Number(document.getElementById("txt_num").value);
+            if (txt_num <= 13) {
+                document.getElementById("h3_res").innerText = "Difference is : " + (13 - txt_num);
+            } else {
+                document.getElementById("h3_res").innerText = "Difference is : " + (txt_num - 13) * 2;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
