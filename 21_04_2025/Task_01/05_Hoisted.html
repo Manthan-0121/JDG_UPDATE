@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisted</title>
+</head>
+
+<body>
+    <script>
+        let a;
+        console.log(a); // undefined
+        
+        
+        // console.log(b);
+        // const b = 10;
+
+        demo_chk(); 
+        function demo_chk(){
+            console.log(c); // undefined
+            var c = 20;
+            console.log(c); // 20
+        }
+    </script>
+</body>
+
+</html>

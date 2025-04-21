@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Operations</title>
+</head>
+<body>
+    <script>
+        let a = 5; // 0101 in binary
+        let b = 3; // 0011 in binary
+        let c = 0; // Initialize c to 0
+        let d = 0; // Initialize d to 0
+
+        // Bitwise AND
+        c = a & b; // 0101 & 0011 = 0001 (1 in decimal)
+        console.log("Bitwise AND:", c); // Output: 1
+
+        // Bitwise OR
+        c = a | b; // 0101 | 0011 = 0111 (7 in decimal)     
+        console.log("Bitwise OR:", c); // Output: 7
+        
+        // Bitwise XOR
+        c = a ^ b; // 0101 ^ 0011 = 0110 (6 in decimal)
+        console.log("Bitwise XOR:", c); // Output: 6
+
+        // Bitwise NOT
+        c = ~a; // ~0101 = 1010 (in 32-bit signed integer, this is -6)
+        console.log("Bitwise NOT:", c); // Output: -6   
+
+        // Left Shift
+        c = a << 1; // 0101 << 1 = 1010 (10 in decimal)
+        console.log("Left Shift:", c); // Output: 10
+
+        // Right Shift
+        c = a >> 1; // 0101 >> 1 = 0010 (2 in decimal)
+        console.log("Right Shift:", c); // Output: 2
+
+        // Unsigned Right Shift
+        c = a >>> 1; // 0101 >>> 1 = 0010 (2 in decimal)
+        console.log("Unsigned Right Shift:", c); // Output: 2
+
+        // Bitwise NOT on b
+        d = ~b; // ~0011 = 1100 (in 32-bit signed integer, this is -4)
+        console.log("Bitwise NOT on b:", d); // Output: -4
+
+        // Left Shift on b
+        d = b << 1; // 0011 << 1 = 0110 (6 in decimal)
+        console.log("Left Shift on b:", d); // Output: 6
+
+        // Right Shift on b
+        d = b >> 1; // 0011 >> 1 = 0001 (1 in decimal)
+        console.log("Right Shift on b:", d); // Output: 1
+
+        // Unsigned Right Shift on b
+        d = b >>> 1; // 0011 >>> 1 = 0001 (1 in decimal)
+        console.log("Unsigned Right Shift on b:", d); // Output: 1
+    </script>
+</body>
+</html>

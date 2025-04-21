@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+
+<body>
+    <script>
+        let num = 12;
+        let reversedNum = 0;
+        let remainder = 0;
+        let originalNum = num;
+        while (num > 0) {
+            remainder = num % 10; // 2 // 1
+            reversedNum = (reversedNum * 10) + remainder; //0+2 //2*10+1=21
+            num = Math.floor(num / 10); // 1
+        }
+        console.log("Original Number: " + originalNum);
+        console.log("Reversed Number: " + reversedNum);
+    </script>
+</body>
+
+</html>

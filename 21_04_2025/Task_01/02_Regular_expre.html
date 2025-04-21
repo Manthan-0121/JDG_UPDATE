@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let text = "Visit W3Schools!";
+
+        // Using String search() With a String
+        let n = text.search("W3Schools");
+        console.log("Found in " + n + " position"); // 6
+
+        let n1 = text.search(/w3schools/);
+        console.log("Found in " + n1 + " position"); // 6
+
+        let names = "John " +
+            "Peter Sally John";
+        let name1 = names.search("John");
+
+        console.log("Found in " + name1 + " position"); // 0 // find only one position
+        let name2 = names.search(/John/g); // g is for global search
+        console.log(names.match(/John/g)); // 0, 12 // find all positions
+
+        let matches = text.match(/^Peter$/m); // m is for multiline search
+        console.log(matches); // null
+
+        // u – Unicode Mode
+        let str = "🙂";
+        console.log(/\u{1F642}/.test(str));    // false
+        console.log(/\u{1F642}/u.test(str));   // true
+
+        // Using String replace() With a String
+        let text1 = "Visit Microsoft!";
+        let newText = text1.replace("Microsoft", "W3Schools");
+        console.log(newText); // Visit W3Schools!
+
+        
+    </script>
+</body>
+
+</html>

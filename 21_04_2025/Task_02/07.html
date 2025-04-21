@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Toggle</title>
+</head>
+<body>
+    <button onclick="toggleDropdown()">Action</button>
+    <div id="ddl_menu" style="display: none;">
+        <p>Profile</p>
+        <p>Setting</p>
+        <p>Logout</p>
+    </div>
+    <script>
+        function toggleDropdown() {
+            var ddl_menu = document.getElementById("ddl_menu");
+            if (ddl_menu.style.display == "none") {
+                ddl_menu.style.display = "block";
+            } else {
+                ddl_menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

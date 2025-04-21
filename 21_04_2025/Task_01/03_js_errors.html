@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Errors</title>
+</head>
+
+<body>
+    <script>
+        // let x = 10;
+        // console.log(x);
+        let a = 9;
+        try {
+            console.log(x);
+        } catch (error) {
+            console.log("An error occurred: " + error.name);
+        }
+
+
+
+        try {
+            if (a < 10) throw "Value is less than 10";
+        } catch (error) {
+            console.log("An error occurred: " + error);
+        }
+
+        try {
+            console.log(x);
+        } catch (error) {
+            console.log("Error Name is " + error.name + " and Error Message is " + error.message);
+        }
+
+
+        let num = 1;
+        try {
+            num.toPrecision(105);
+        }
+        catch (err) {
+            console.log(err.name);
+        }
+
+        let x = 5;
+        try {
+            x = y + 1;
+        }
+        catch (err) {
+            console.log(err.name);
+        }
+
+        try {
+            eval("alert('Hello)");   // Missing ' will produce an error
+        }
+        catch (err) {
+            console.log(err.name);
+        }
+
+        let num2 = 223;
+        try {
+            num2.toUpperCase();   // You cannot convert a number to upper case
+        }
+        catch (err) {
+            console.log(err.name);
+        }
+
+        
+        console.log("This line will still execute.");
+    </script>
+</body>
+
+</html>

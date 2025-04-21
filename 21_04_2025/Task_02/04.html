@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw Error for Non-Integer</title>
+</head>
+<body>
+    <script>
+        function chk_number(chk_num){
+            if (chk_num % 1 !== 0) {
+                throw new Error("Not an Integer");
+            } else {
+                return "Integer";
+            }
+        }
+
+        try {
+            console.log(chk_number(4.5));
+        } catch (error) {
+            console.error(error.message);
+        }
+        
+        try{
+            console.log(chk_number(4));
+        }catch (error) {
+            console.error(error.message);
+        }
+    </script>
+</body>
+</html>
