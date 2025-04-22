@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Modules</title>
+</head>
+
+<body>
+    <script type="module">
+        import * as math from './05_math.js';
+
+
+        console.log(math.add(5, 3));
+        console.log(math.subtract(5, 3));
+        console.log(math.default(5, 3));  
+    </script>
+</body>
+
+</html>

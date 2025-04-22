@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count the Vowels</title>
+</head>
+<body>
+    <script>
+        function countVowels(str) {
+            const vowels = 'aeiou';
+            let count = 0;
+            for (let char of str) {
+                if (vowels.includes(char)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        const inputString = "Hanuman is brave and strong";
+        const vowelCount = countVowels(inputString);
+        console.log(`The number of vowels in "${inputString}" is: ${vowelCount}`);
+    </script>
+</body>
+</html>

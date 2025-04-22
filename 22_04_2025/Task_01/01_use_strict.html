@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Strict</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function exampleFunction() {
+            var x = 3.14;
+            console.log(x);
+        }
+
+        exampleFunction();
+
+        function exampleError() {
+            y = 10;
+            console.log(y);
+        }
+
+        try {
+            exampleError();
+        } catch (e) {
+            console.error("Error:", e.message);
+        }
+
+        x = {p1:10, p2:20};  //not allows to assign value to undeclared variable x in strict mode 
+        // let x = {p1:10, p2:20};  //not give any error 
+    </script>
+</body>
+</html>

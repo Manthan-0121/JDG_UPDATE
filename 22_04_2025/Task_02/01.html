@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Class with Details</title>
+</head>
+
+<body>
+    <script>
+        class Person_info {
+            constructor(name, age, dob, address, phoneNumber) {
+                this.name = name;
+                this.age = age;
+                this.dob = dob;
+                this.address = address;
+                this.phoneNumber = phoneNumber;
+            }
+
+            getDetails() {
+                return "Name: " + this.name + " Age: :" + this.age + " , Date of Birth: " + this.dob + ", Address: " + this.address +", Phone Number: "+this.phoneNumber;
+            }
+        }
+
+
+        const person1 = new Person_info("Manthan",23, "01/01/2002", "Rajkot", "+918320909090");
+        console.log(person1.getDetails());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            demoCars(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            demoMilage(milage) {
+                this.milage = milage;
+            }
+
+            demoColor(color) {
+                this.color = color;
+            }
+        }
+
+        // Creating an object of the class Car
+        const myCar = new Car();
+        myCar.demoCars("BMW", 2016);
+
+        console.log(myCar.name + " " + myCar.year); // Ford 2014
+
+    </script>
+</body>
+
+</html>

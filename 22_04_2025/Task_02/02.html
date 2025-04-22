@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle and Car Classes with Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Vehicle {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+
+            displayInfo() {
+                console.log(`Make: ${this.make}, Model: ${this.model}`);
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(make, model, doors) {
+                super(make, model);
+                this.doors = doors;
+            }
+
+            displayInfo() {
+                super.displayInfo();
+                console.log(`Doors: ${this.doors}`);
+            }
+        }
+
+        const myCar = new Car('Toyota', 'Corolla', 4);
+        myCar.displayInfo();
+
+    </script>
+</body>
+
+</html>

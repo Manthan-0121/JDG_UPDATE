@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The JavaScript this Keyword</title>
+</head>
+
+<body>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+    <script>
+        const person = {
+            firstName: "Manthan",
+            lastName: "Mistry",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Display data from the object:
+        console.log(person.fullName()); // Will return "Manthan Mistry"
+        console.log(person.firstName);
+
+
+
+        function myFunction() {
+            return this;
+        }
+        console.log(myFunction());
+
+
+        function myFunction1() {
+            "use strict";
+            return this;
+        }
+        console.log(myFunction1()); 
+
+
+        
+
+    </script>
+</body>
+
+</html>

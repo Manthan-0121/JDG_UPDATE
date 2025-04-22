@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankAccount Class with Deposit and Withdrawal</title>
+</head>
+
+<body>
+    <script>
+        class bank_acount {
+            constructor(account_num, account_holder, balance) {
+                this.account_num = account_num;
+                this.account_holder = account_holder;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                console.log("Deposited " + amount + ". New balance: " + this.balance + ".");
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficient funds for withdrawal.");
+                } else {
+                    this.balance -= amount;
+                    console.log("Withdrew " + amount + ". New balance: " + this.balance + ".");
+                }
+            }
+        }
+        const account = new bank_acount("4268625698", "Manthan Mistry", 15000);
+        account.deposit(500);
+        account.withdraw(200);
+        account.withdraw(1500);
+        account.withdraw(130000);
+    </script>
+</body>
+
+</html>

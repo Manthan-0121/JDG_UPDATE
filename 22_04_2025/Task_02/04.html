@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape, Circle, and Triangle Classes with Area Calculation</title>
+</head>
+
+<body>
+    <script>
+        class shape {
+            constructor(name) {
+                this.name = name;
+            }
+
+            area() {
+                console.log("Area method not implemented for " + this.name);
+            }
+        }
+        class Circle extends shape {
+            constructor(radius) {
+                super("Circle");
+                this.radius = radius;
+            }
+
+            area() {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+        class Triangle extends shape {
+            constructor(base, height) {
+                super("Triangle");
+                this.base = base;
+                this.height = height;
+            }
+
+            area() {
+                return 0.5 * this.base * this.height;
+            }
+        }
+
+        const circle = new Circle(5);
+        const triangle = new Triangle(4, 6);
+        
+        console.log("Area of " + circle.name + ": " + circle.area().toFixed(2));
+
+    </script>
+</body>
+
+</html>
