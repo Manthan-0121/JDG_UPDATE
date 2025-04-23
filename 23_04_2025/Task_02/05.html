@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cylinder Volume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #444;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 1rem;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #4e54c8;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #3b3f9d;
+        }
+        h3 {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cylinder Volume Calculator</h2>
+        <div class="input-group">
+            <label for="txt_Height">Height</label>
+            <input type="number" id="txt_Height">
+        </div>
+        <div class="input-group">
+            <label for="txt_Radius">Radius</label>
+            <input type="number" id="txt_Radius">
+        </div>
+        <button type="button" onclick="cal_cylinder_volume()" id="btn_calculate">Calculate</button>
+        <h3 id="h3_res"></h3>
+    </div>
+
+    <script>
+        function cal_cylinder_volume(){
+            let txt_Height = Number(document.getElementById('txt_Height').value);
+            let txt_Radius = Number(document.getElementById('txt_Radius').value);
+            let res = Math.PI * Math.pow(txt_Radius, 2) * txt_Height;
+            document.getElementById('h3_res').innerText = `Volume: ${res.toFixed(2)} cubic units`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Property</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+        text = "";
+        for (let keys in student) {
+            if(keys == "sclass"){
+                delete student[keys];
+            }else{
+                text += student[keys] + ", ";
+            }
+        }
+        document.write(text)
+    </script>
+</body>
+
+</html>

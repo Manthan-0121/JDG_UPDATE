@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Length</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+        let count = 0;
+        for (let keys in student) {
+            count += 1;
+        }
+        document.write("Total Length of object is : " + count)
+    </script>
+</body>
+
+</html>

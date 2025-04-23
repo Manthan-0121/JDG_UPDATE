@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Start</title>
+</head>
+
+<body>
+    <script>
+        let text = '{ "employees" : [' +
+            '{ "firstName":"John" , "lastName":"Doe" },' +
+            '{ "firstName":"Anna" , "lastName":"Smith" },' +
+            '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+        let obj = JSON.parse(text);
+
+        for (let i = 0; i < obj.employees.length; i++) {
+            document.write(i + "). " + obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>");
+        }
+
+        // Array JSON
+        const text1 = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+        const myArr = JSON.parse(text1);
+        document.write("<br>" + myArr[0] + "<br>");
+        document.write(myArr[1] + "<br>");
+        document.write(myArr[2] + "<br>");
+
+        const myobjj = JSON.stringify(text);
+        document.write("<br><b>" + myobjj + "</b><br>");
+
+        localStorage.setItem("myObj", myobjj);
+        const myObj = localStorage.getItem("myObj");
+        const myObjj2 = JSON.parse(myObj);
+
+        document.write("<br><b>" + myObjj2 + "</b><br>");
+
+
+        const myJSON = '{"name":"John", "age":30, "car":null}';
+        const myObj3 = JSON.parse(myJSON);
+        x = myObj3.name;
+
+        document.write("<br><b>" + x + "</b><br>");
+    </script>
+</body>
+
+</html>

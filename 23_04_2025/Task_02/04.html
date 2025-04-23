@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Reading Status</title>
+</head>
+
+<body>
+    <script>
+        var library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true,
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                readingStatus: false
+            }];
+
+        let arr_length = library.length;
+        let j = 1;
+        for (let i = 0; i < arr_length; i++) {
+            j = i + 1;
+            document.write("<b>" + j + ") Author: </b> " + library[i].author + " <b>Title: </b>" + library[i].title + " <b>Reading Status: </b> " + library[i].readingStatus + "<br>");
+        }
+    </script>
+</body>
+
+</html>
