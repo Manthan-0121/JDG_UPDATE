@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .email-header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .email-body {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .verify-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .email-footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #f1f1f1;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Verify Your Email</h1>
+        </div>
+        <div class="email-body">
+            <p>Hi <strong>{USERNAME}</strong>,</p>
+            <p>Thank you for registering with us! Please confirm your email address by clicking the button below:</p>
+
+            <p style="text-align: center;">
+                <a href="https://www.google.com" class="verify-button">Verify Email</a>
+            </p>
+
+            <p>If you didn’t create an account, you can safely ignore this email.</p>
+            <p>Thanks,<br>Your Company Team</p>
+        </div>
+        <div class="email-footer">
+            &copy; 2025 Your Company. All rights reserved.
+        </div>
+    </div>
+
+</body>
+
+</html>
