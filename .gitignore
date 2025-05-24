@@ -1,2 +1,6 @@
 .idea/
 .vscode/
+# .gitignore
+/23_05_2025/Task_01/Authentication/google_auth/config.php
+/23_05_2025/Task_01/Authentication/google_auth/vendor/
+/23_05_2025/Task_01/Authentication/google_auth/composer.json
